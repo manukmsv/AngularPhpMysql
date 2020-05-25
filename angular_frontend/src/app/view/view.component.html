@@ -1,0 +1,31 @@
+ 
+<div class="container"><br>
+        <h2>Student Record</h2>    <br>      
+        <table class="table table-striped">
+          <thead>
+            <tr>
+                
+              <th>ID</th>
+              <th>FIRST NAME</th>
+              <th>LAST NAME</th>
+              <th>EMAIL</th>
+              <th>EDIT</th>
+              <th>DELETE</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let std of students">
+              <td>{{std.sId}}</td>
+              <td>{{std.fName}}</td>
+              <td>{{std.lName}}</td>
+              <td>{{std.email}}</td>
+              <td><button class="btn btn-success" (click)="edit(std)">EDIT</button></td>
+              <td><button class="btn btn-danger" (click)="delete(std)">DELETE</button></td>
+            </tr>
+             
+          </tbody>
+        </table>
+        <div>
+                <a routerLink="/add" class="btn btn-primary"> Add New Student</a>
+            </div>
+      </div>

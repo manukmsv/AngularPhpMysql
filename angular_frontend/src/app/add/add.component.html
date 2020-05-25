@@ -1,0 +1,47 @@
+<div class="add-main">
+    <h2 class="text-center">Add Students</h2>
+    <form [formGroup]="addForm" novalidate class="form">
+        
+        <div class="form-group">
+                <label for="sId">First Name</label>
+                <input type="text" formControlName="fName" placeholder="Student Name" name="fName" class="form-control">
+            </div>
+
+            <div class="alert alert-danger" *ngIf="addForm.get('fName').hasError('required') && addForm.get('fName').touched">
+                Please Enter First Name
+            </div>
+
+
+            <div class="form-group">
+                    <label for="sId">Last Name</label>
+                    <input type="text" formControlName="lName" placeholder="Student last Name" name="lName" class="form-control">
+                </div>
+
+                <div class="alert alert-danger" *ngIf="addForm.get('lName').hasError('maxlength') && addForm.get('lName').touched">
+                        Max 10 charaters are allow
+                    </div>
+
+                <div class="alert alert-danger" *ngIf="addForm.get('lName').hasError('required') && addForm.get('lName').touched">
+                    Please Enter Last Name
+                </div>
+
+
+                <div class="form-group">
+                        <label for="sId">Email</label>
+                        <input type="email" formControlName="email" placeholder="Email" name="email" class="form-control">
+                    </div>
+
+                    <div class="alert alert-danger" *ngIf="addForm.get('email').hasError('maxlength') && addForm.get('email').touched">
+                            Max 30 charaters are allow
+                        </div>
+
+                    <div class="alert alert-danger" *ngIf="addForm.get('email').hasError('required') && addForm.get('email').touched">
+                        Please Enter Email
+                    </div>
+
+                    <button class="btn btn-success" (click)="onSubmit()">Save</button>
+    
+    </form>
+    <br>
+    <a routerLink="/view" class="btn btn-primary"> View Students</a>
+</div>
