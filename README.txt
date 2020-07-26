@@ -1,16 +1,13 @@
  
+# Angular 8 - PHP - MySQL
 
-1: Please open the folder name "Angular 8 Part", the install angular 8 , bootstrap, jquery and popper.js.
-  then nevigate to the file name "angular-php-mysql-app" through cmd and run the command "ng serve -o", the app will be open in the browser.
+1: Please open the folder name "angular_frontend", in the terminal. Then run "npm install", then run the command "ng serve -o", the app will be open in the browser.
 
+2: Please paste the folder "php_backend" in server, and change the folder path (eg:- php_backend) to htaccess.
+  if you have xampp server paste in htdocs. if you have wamp server, then past it in www folder. 
 
-2: Please open the folder name "PHP Par", and past the file name "angular-php-mysql-app" to htdocs if you have xampp server, if you have wamp server, please import the database name "mydb".
-   then past it in www folder. 
+3: Create database and import the database name "mydb.sql" in the folder "php_backend".
 
-  then simple run the app with command "ng serve -o", the app will be open in the browser.
-
-
-please don't rename the file name "angular-php-mysql-app" in PHP part
-
+Prerequisite:-
 Enabling mod_headers on apache2
 a2enmod headers
