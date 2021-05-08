@@ -8,6 +8,10 @@
 
 3: Create database and import the database name "mydb.sql" in the folder "php_backend".
 
+
+![Screenshot](screenshot.png)
+
+
 Prerequisite:-
 Enabling mod_headers on apache2
 a2enmod headers
